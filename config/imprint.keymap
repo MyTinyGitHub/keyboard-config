@@ -112,14 +112,14 @@
 
         Extended_Layer {
             bindings = <
-&trans  &trans                                &trans                                &trans                                 &trans                            &trans               &trans         &trans         &trans    &trans      &trans           &trans
-&trans  &kp F1                                &kp F2                                &kp F3                                 &kp F4                            &kp F5               &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
-&trans  &kp ESC                               &kp K_BACK                            &kp K_FIND                             &kp K_FORWARD                     &trans               &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
-&trans  &hold_tap_one_shot LEFT_GUI LEFT_GUI  &hold_tap_one_shot LEFT_ALT LEFT_ALT  &hold_tap_one_shot LCTRL LEFT_CONTROL  &hold_tap_one_shot LSHIFT LSHIFT  &trans               &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
-&trans  &kp LC(Z)                             &kp LC(X)                             &kp LC(C)                              &trans                            &kp LC(V)            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
-&trans  &trans                                &trans                                &trans                                 &trans                                                                &trans         &trans    &trans      &trans           &trans
-                                                                                                                           &trans                            &trans     &trans    &trans         &trans         &trans
-                                                                                                                           &trans                            &trans     &trans    &trans         &trans         &trans
+&trans           &trans                    &trans                    &trans                      &trans                   &trans                          &trans         &trans         &trans    &trans      &trans           &trans
+&kp GRAVE        &kp LEFT_BRACKET          &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS       &kp RIGHT_BRACKET        &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
+&kp EXCLAMATION  &kp COMMA                 &kp LEFT_BRACE            &kp RIGHT_BRACE             &kp SEMICOLON            &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
+&kp HASH         &kp_170ms LEFT_GUI LCTRL  &kp_170ms LEFT_ALT EQUAL  &kp_170ms LCTRL UNDERSCORE  &kp_170ms LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
+&kp TILDE        &kp LESS_THAN             &kp PIPE                  &kp MINUS                   &kp GREATER_THAN         &kp NON_US_BACKSLASH            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
+&trans           &kp AMPERSAND             &kp SQT                   &kp DOUBLE_QUOTES           &kp PLUS                                                                &trans         &trans    &trans      &trans           &trans
+                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
+                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
             >;
         };
 
