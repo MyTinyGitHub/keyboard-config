@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen { zmk,matrix-transform = &imprint_function_row_full_bottom_row; };
+    chosen { zmk,matrix-transform = &imprint_number_row_full_bottom_row; };
 
     behaviors {
         kp_150ms: kp_150ms {
@@ -99,7 +99,6 @@
 
         Default_Layer {
             bindings = <
-&none  &none                 &none                 &none              &none                   &none                                                       &none               &none                   &none              &none                          &none                 &none
 &none  &kp N1                &kp N2                &kp N3             &kp N4                  &kp N5                                                      &kp N6              &kp N7                  &kp N8             &kp N9                         &kp N0                &kp GRAVE
 &none  &kp Z                 &kp Y                 &kp O              &kp U                   &kp EQUAL                                                   &kp Q               &kp L                   &kp D              &kp P                          &kp X                 &kp BACKSLASH
 &kp W  &kp_170ms LEFT_WIN C  &kp_150ms LEFT_ALT I  &kp_150ms LCTRL A  &kp_150ms LEFT_SHIFT E  &kp SEMICOLON                                               &kp K               &kp_150ms LEFT_SHIFT H  &kp_150ms LCTRL T  &kp_150ms LEFT_ALT N           &kp_170ms LEFT_WIN S  &kp F
@@ -112,7 +111,6 @@
 
         Extended_Layer {
             bindings = <
-&trans           &trans                    &trans                    &trans                      &trans                   &trans                          &trans         &trans         &trans    &trans      &trans           &trans
 &kp GRAVE        &kp LEFT_BRACKET          &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS       &kp RIGHT_BRACKET        &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
 &kp EXCLAMATION  &kp COMMA                 &kp LEFT_BRACE            &kp RIGHT_BRACE             &kp SEMICOLON            &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
 &kp HASH         &kp_170ms LEFT_GUI CARET  &kp_170ms LEFT_ALT EQUAL  &kp_170ms LCTRL UNDERSCORE  &kp_170ms LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
@@ -126,7 +124,6 @@
         Number_Layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
@@ -138,7 +135,6 @@
 
         Symbols_Layer {
             bindings = <
-&trans           &trans            &trans                &trans                 &trans                &trans                   &trans  &trans         &trans  &trans     &trans     &trans
 &kp GRAVE        &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET     &kp PERIOD               &none   &trans         &trans  &trans     &trans     &trans
 &kp EXCLAMATION  &kp COMMA         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON         &kp QUESTION             &none   &trans         &trans  &trans     &trans     &trans
 &kp HASH         &kp CARET         &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR            &kp ASTERISK             &none   &kp BACKSPACE  &trans  &kp SPACE  &kp ENTER  &trans
@@ -154,7 +150,6 @@
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mo 5   &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
                                 &mkp LCLK  &mkp RCLK  &trans    &trans  &trans  &trans
@@ -167,7 +162,6 @@
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &mo 5   &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                     &trans                 &trans     &trans  &trans  &trans
                                 &mkp LCLK  &mkp RCLK  &trans    &mkp LCLK  &mkp MCLK              &mkp RCLK
@@ -177,7 +171,6 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                  &trans           &trans           &trans           &trans           &trans           &trans
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans           &trans
 &sys_reset   &trans        &trans        &trans        &trans        &trans                  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
 &bootloader  &trans        &trans        &trans        &trans        &trans                  &trans           &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
