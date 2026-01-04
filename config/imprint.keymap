@@ -10,14 +10,15 @@
     chosen { zmk,matrix-transform = &imprint_number_row_full_bottom_row; };
 
     behaviors {
-        kp_150ms: kp_150ms {
+        KP_150_RIGHT: KP_150_RIGHT {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_150MS";
+            label = "KP_150_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 58 59 60 64 65 66>;
         };
 
         word_caps: word_caps {
@@ -37,14 +38,15 @@
             flavor = "balanced";
         };
 
-        kp_170ms: kp_170ms {
+        KP_170_RIGHT: KP_170_RIGHT {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_170MS";
+            label = "KP_170_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 58 59 60 64 65 66>;
         };
 
         hold_tap_one_shot: hold_tap_one_shot {
@@ -90,7 +92,29 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
+        };
+
+        KP_150_LEFT: KP_150_LEFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_150_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
+        };
+
+        KP_170_LEFT: KP_170_LEFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_170_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
         };
     };
 
@@ -108,25 +132,25 @@
 
         Default_Layer {
             bindings = <
-&none  &kp N1                &kp N2                &kp N3                 &kp N4                  &kp N5                                                      &kp N6              &kp N7                  &kp N8             &kp N9                         &kp N0                &kp GRAVE
-&none  &kp Q                 &kp Y                 &kp O                  &kp U                   &kp EQUAL                                                   &kp X               &kp L                   &kp D              &kp P                          &kp Z                 &kp BACKSLASH
-&kp B  &kp_170ms LEFT_WIN C  &kp_150ms LEFT_ALT I  &kp_150ms LCTRL A      &kp_150ms LEFT_SHIFT E  &kp MINUS                                                   &kp K               &kp_150ms LEFT_SHIFT H  &kp_150ms LCTRL T  &kp_150ms LEFT_ALT N           &kp_170ms LEFT_WIN S  &kp W
-&none  &hold_tap 4 SQT       &kp COMMA             &kp PERIOD             &lt 2 SLASH             &kp SEMICOLON                                               &kp J               &lt 3 M                 &kp G              &kp F                          &kp V                 &none
-&none  &none                 &none                 &double_tap_backspace  &kp ESCAPE                                                                                              &kp ENTER               &kp TAB            &right_par_shift_greater_then  &none                 &none
-                                                                          &hold_tap 1 SPACE       &left_par_shift_less_then  &right_par_shift_greater_then    &none               &none                   &hold_tap 1 R
-                                                                          &none                   &none                      &none                            &hold_tap 6 DELETE  &none                   &none
+&none  &kp N1                   &kp N2                   &kp N3                 &kp N4                     &kp N5                                                      &kp N6              &kp N7                      &kp N8                 &kp N9                         &kp N0                    &kp GRAVE
+&none  &kp Q                    &kp Y                    &kp O                  &kp U                      &kp EQUAL                                                   &kp X               &kp L                       &kp D                  &kp P                          &kp Z                     &kp BACKSLASH
+&kp B  &KP_170_LEFT LEFT_WIN C  &KP_150_LEFT LEFT_ALT I  &KP_150_LEFT LCTRL A   &KP_150_LEFT LEFT_SHIFT E  &kp MINUS                                                   &kp K               &KP_150_RIGHT LEFT_SHIFT H  &KP_150_RIGHT LCTRL T  &KP_150_RIGHT LEFT_ALT N       &KP_170_RIGHT LEFT_WIN S  &kp W
+&none  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD             &lt 2 SLASH                &kp SEMICOLON                                               &kp J               &lt 3 M                     &kp G                  &kp F                          &kp V                     &none
+&none  &none                    &none                    &double_tap_backspace  &kp ESCAPE                                                                                                 &kp ENTER                   &kp TAB                &right_par_shift_greater_then  &none                     &none
+                                                                                &hold_tap 1 SPACE          &left_par_shift_less_then  &right_par_shift_greater_then    &none               &none                       &hold_tap 1 R
+                                                                                &none                      &none                      &none                            &hold_tap 6 DELETE  &none                       &none
             >;
         };
 
         Extended_Layer {
             bindings = <
-&kp GRAVE        &kp LEFT_BRACKET          &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS       &kp RIGHT_BRACKET        &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
-&kp EXCLAMATION  &kp COMMA                 &kp LEFT_BRACE            &kp RIGHT_BRACE             &kp SEMICOLON            &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
-&kp HASH         &kp_170ms LEFT_GUI CARET  &kp_170ms LEFT_ALT EQUAL  &kp_170ms LCTRL UNDERSCORE  &kp_170ms LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
-&kp TILDE        &kp LESS_THAN             &kp PIPE                  &kp MINUS                   &kp GREATER_THAN         &kp NON_US_BACKSLASH            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
-&trans           &kp AMPERSAND             &kp SQT                   &kp DOUBLE_QUOTES           &kp PLUS                                                                &trans         &trans    &trans      &trans           &trans
-                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
-                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
+&kp GRAVE        &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &kp RIGHT_BRACKET            &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
+&kp EXCLAMATION  &kp COMMA                     &kp LEFT_BRACE                &kp RIGHT_BRACE                 &kp SEMICOLON                &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
+&kp HASH         &KP_170_RIGHT LEFT_GUI CARET  &KP_170_RIGHT LEFT_ALT EQUAL  &KP_170_RIGHT LCTRL UNDERSCORE  &KP_170_RIGHT LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
+&kp TILDE        &kp LESS_THAN                 &kp PIPE                      &kp MINUS                       &kp GREATER_THAN             &kp NON_US_BACKSLASH            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
+&trans           &kp AMPERSAND                 &kp SQT                       &kp DOUBLE_QUOTES               &kp PLUS                                                                    &trans         &trans    &trans      &trans           &trans
+                                                                                                             &trans                       &trans                &trans    &trans         &trans         &trans
+                                                                                                             &trans                       &trans                &trans    &trans         &trans         &trans
             >;
         };
 
