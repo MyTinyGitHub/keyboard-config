@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
 
         KP_150_LEFT: KP_150_LEFT {
