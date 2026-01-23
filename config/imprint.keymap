@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
 
         KP_150_LEFT: KP_150_LEFT {
@@ -132,13 +132,13 @@
 
         Default_Layer {
             bindings = <
-&none  &kp N1                   &kp N2                   &kp N3                 &kp N4                     &kp N5                                                      &kp N6              &kp N7                      &kp N8                 &kp N9                         &kp N0                    &kp GRAVE
-&none  &kp Q                    &kp Y                    &kp O                  &kp U                      &kp EQUAL                                                   &kp X               &kp L                       &kp D                  &kp P                          &kp Z                     &kp BACKSLASH
-&kp B  &KP_170_LEFT LEFT_WIN C  &KP_150_LEFT LEFT_ALT I  &KP_150_LEFT LCTRL A   &KP_150_LEFT LEFT_SHIFT E  &kp MINUS                                                   &kp K               &KP_150_RIGHT LEFT_SHIFT H  &KP_150_RIGHT LCTRL T  &KP_150_RIGHT LEFT_ALT N       &KP_170_RIGHT LEFT_WIN S  &kp W
-&none  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD             &lt 2 SLASH                &kp SEMICOLON                                               &kp J               &lt 3 M                     &kp G                  &kp F                          &kp V                     &none
-&none  &none                    &none                    &double_tap_backspace  &kp ESCAPE                                                                                                 &kp ENTER                   &kp TAB                &right_par_shift_greater_then  &none                     &none
-                                                                                &hold_tap 1 SPACE          &left_par_shift_less_then  &right_par_shift_greater_then    &none               &none                       &hold_tap 1 R
-                                                                                &none                      &none                      &none                            &hold_tap 6 DELETE  &none                       &none
+&none  &kp N1                   &kp N2                   &kp N3                &kp N4                     &kp N5                                                      &kp N6              &kp N7                      &kp N8                 &kp N9                         &kp N0                    &kp GRAVE
+&none  &kp Q                    &kp Y                    &kp O                 &kp U                      &kp EQUAL                                                   &kp X               &kp L                       &kp D                  &kp P                          &kp Z                     &kp BACKSLASH
+&kp B  &KP_170_LEFT LEFT_WIN C  &KP_150_LEFT LEFT_ALT I  &KP_150_LEFT LCTRL A  &KP_150_LEFT LEFT_SHIFT E  &kp MINUS                                                   &kp K               &KP_150_RIGHT LEFT_SHIFT H  &KP_150_RIGHT LCTRL T  &KP_150_RIGHT LEFT_ALT N       &KP_170_RIGHT LEFT_WIN S  &kp W
+&none  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD            &lt 2 SLASH                &kp SEMICOLON                                               &kp J               &lt 3 M                     &kp G                  &kp F                          &kp V                     &none
+&none  &none                    &none                    &none                 &double_tap_backspace                                                                                      &kp ENTER                   &kp TAB                &right_par_shift_greater_then  &none                     &none
+                                                                               &hold_tap 1 SPACE          &left_par_shift_less_then  &right_par_shift_greater_then    &none               &none                       &hold_tap 1 R
+                                                                               &none                      &none                      &none                            &hold_tap 6 DELETE  &none                       &none
             >;
         };
 
