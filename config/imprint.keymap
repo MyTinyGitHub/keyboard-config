@@ -297,6 +297,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 };
 
+/ {
     underglow-layer {
       compatible = "zmk,underglow-layer";
 
@@ -314,6 +315,7 @@
       };
       #endif
     };
+};
 
 &trackball_peripheral_listener {
     sniper {
