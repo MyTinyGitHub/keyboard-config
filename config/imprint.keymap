@@ -7,6 +7,80 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/rgb_colors.h>
 
+#define RED_RGB 0xFF0000 // #FF0000 RED      => RED (red)
+  #define COR_RGB 0xFF7C4D // #FF7C4D CORAL    => COR (coral)
+  #define ORN_RGB 0xFF8000 // #FF8000 ORANGE   => ORN (ornj)
+  #define GDN_RGB 0xD9A521 // #D9A521 GOLDNROD => GDN (gold'nrod)
+  #define GOL_RGB 0xFFD900 // #FFD900 GOLD     => GOL (gold)
+  #define YLW_RGB 0xFFFF00 // #FFFF00 YELLOW   => YLW (yellow)
+  #define CHU_RGB 0x80FF00 // #80FF00 CHARTRSE => CHU (chartreuse)
+  #define GRN_RGB 0x00FF00 // #00FF00 GREEN    => GRN (green)
+  #define SPG_RGB 0x00FF80 // #00FF80 SPRINGRN => SPG (spring green)
+  #define CYN_RGB 0x00FFFF // #00FFFF CYAN     => CYN (sigh-an)
+  #define AZU_RGB 0x99F5FF // #99F5FF AZURE    => AZU (a-zur)
+  #define TEA_RGB 0x008080 // #008080 TEAL     => TEA (teel)
+  #define TUR_RGB 0x476E6A // #476E6A TURQUOIS => TUR (turquoise)
+  #define BLU_RGB 0x0000FF // #0000FF BLUE     => BLU (bloo)
+  #define PUR_RGB 0x7A00FF // #7A00FF PURPLE   => PUR (purp)
+  #define MAJ_RGB 0xFF00FF // #FF00FF MAGENTA  => MAJ (mah-jenta)
+  #define PNK_RGB 0xFF80BF // #FF80BF PINK     => PNK (pink)
+  #define WHT_RGB 0xFFFFFF // #FFFFFF WHITE    => WHT (white)
+  #define BLK_RGB 0x000000 // #000000 BLACK    => BLK (blak)
+
+  //
+  // color definitions from MoErgo
+  // https://github.com/moergo-sc/zmk/blob/aca523dfce9b6447ffd19d833b791d44f1f286de/app/src/rgb_underglow.c#L259-L265
+  //
+  #define DUG_RGB 0x00ff68 // #00ff68 DULL_GRN => DUG (dull green)
+  #define LAC_RGB 0x6b1fce // #6b1fce LILAC    => LAC (lilac)
+
+  //
+  // underglow for the colors above
+  //
+  #define RED &ug RED_RGB
+  #define COR &ug COR_RGB
+  #define ORN &ug ORN_RGB
+  #define GDN &ug GDN_RGB
+  #define GOL &ug GOL_RGB
+  #define YLW &ug YLW_RGB
+  #define CHU &ug CHU_RGB
+  #define GRN &ug GRN_RGB
+  #define SPG &ug SPG_RGB
+  #define CYN &ug CYN_RGB
+  #define AZU &ug AZU_RGB
+  #define TEA &ug TEA_RGB
+  #define TUR &ug TUR_RGB
+  #define BLU &ug BLU_RGB
+  #define PUR &ug PUR_RGB
+  #define MAJ &ug MAJ_RGB
+  #define PNK &ug PNK_RGB
+  #define WHT &ug WHT_RGB
+  #define BLK &ug BLK_RGB
+  #define ___ &ug BLK_RGB
+  #define DUG &ug DUG_RGB
+  #define LAC &ug LAC_RGB
+
+  //
+  // underglow for keyboard locks on the Base layer
+  //
+  #define BSL &ug_sl LAC_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define BNL &ug_nl LAC_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define BCL &ug_cl BLU_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+
+  //
+  // underglow for keyboard locks on the System layer
+  //
+  #define SSL &ug_sl BLK_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define SNL &ug_nl BLK_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define SCL &ug_cl BLK_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+
+  //
+  // colors for mouse speed scaling in Mouse layers
+  //
+  #define FST GOL
+  #define WRP CHU
+  #define SLO COR
+
 / {
     chosen { zmk,matrix-transform = &imprint_number_row_full_bottom_row; };
 
