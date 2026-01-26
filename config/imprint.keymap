@@ -18,6 +18,12 @@
     };
 
     rgb_colors {
+      none_rgb: none_rgb {
+          compatible = "zmk,rgb-underglow-color";
+          red = <0x00>;
+          green = <0x00>;
+          blue = <0x00>;
+      };
       rgb_red: rgb_red {
         compatible = "zmk,rgb-underglow-color";
         red = <0xFF>;
