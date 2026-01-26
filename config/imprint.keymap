@@ -6,25 +6,27 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define RED_RGB 0xFF0000 // #FF0000 RED      => RED (red)
-#define COR_RGB 0xFF7C4D // #FF7C4D CORAL    => COR (coral)
-#define ORN_RGB 0xFF8000 // #FF8000 ORANGE   => ORN (ornj)
-#define GDN_RGB 0xD9A521 // #D9A521 GOLDNROD => GDN (gold'nrod)
-#define GOL_RGB 0xFFD900 // #FFD900 GOLD     => GOL (gold)
-#define YLW_RGB 0xFFFF00 // #FFFF00 YELLOW   => YLW (yellow)
-#define CHU_RGB 0x80FF00 // #80FF00 CHARTRSE => CHU (chartreuse)
-#define GRN_RGB 0x00FF00 // #00FF00 GREEN    => GRN (green)
-#define SPG_RGB 0x00FF80 // #00FF80 SPRINGRN => SPG (spring green)
-#define CYN_RGB 0x00FFFF // #00FFFF CYAN     => CYN (sigh-an)
-#define AZU_RGB 0x99F5FF // #99F5FF AZURE    => AZU (a-zur)
-#define TEA_RGB 0x008080 // #008080 TEAL     => TEA (teel)
-#define TUR_RGB 0x476E6A // #476E6A TURQUOIS => TUR (turquoise)
-#define BLU_RGB 0x0000FF // #0000FF BLUE     => BLU (bloo)
-#define PUR_RGB 0x7A00FF // #7A00FF PURPLE   => PUR (purp)
-#define MAJ_RGB 0xFF00FF // #FF00FF MAGENTA  => MAJ (mah-jenta)
-#define PNK_RGB 0xFF80BF // #FF80BF PINK     => PNK (pink)
-#define WHT_RGB 0xFFFFFF // #FFFFFF WHITE    => WHT (white)
-#define BLK_RGB 0x000000 // #000000 BLACK    => BLK (blak)
+// First, define the actual RGB color nodes
+rgb_colors {
+  rgb_red: rgb_red {
+    compatible = "zmk,rgb-underglow-color";
+    red = <0xFF>;
+    green = <0x00>;
+    blue = <0x00>;
+  };
+  
+  rgb_blue: rgb_blue {
+    compatible = "zmk,rgb-underglow-color";
+    red = <0x00>;
+    green = <0x00>;
+    blue = <0xFF>;
+  };
+};
+
+// Then create shorthand macros that reference them
+#define ___ &none_rgb
+#define RED &rgb_red
+#define BLUE &rgb_blue
 
 / {
     chosen { 
@@ -250,7 +252,7 @@
       Default {
         bindings = <
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ ___ ___ RED_RGB ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ RED ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         ___ ___ ___ ___ ___
