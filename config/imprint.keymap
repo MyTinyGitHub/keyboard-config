@@ -7,7 +7,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen { zmk,matrix-transform = &imprint_number_row_full_bottom_row; };
+    chosen { 
+      zmk,matrix-transform = &imprint_number_row_full_bottom_row; 
+      zmk,underglow = &led_strip;
+    };
 
     behaviors {
         KP_150_RIGHT: KP_150_RIGHT {
@@ -220,7 +223,6 @@
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
-    
     underglow-layer {
 
     }
