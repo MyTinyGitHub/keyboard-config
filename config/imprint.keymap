@@ -291,25 +291,7 @@
                                                           &trans         &trans         &trans    &trans           &trans           &trans
             >;
         };
-    };
-
-    underglow-layer {
-      compatible = "zmk,underglow-layer";
-
-      #ifdef LAYER_Default_Layer
-      Default_Layer {
-        bindings = <
-          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         ___ ___ ___ ___ ___
-        >;
-        layer-id = <LAYER_Default_Layer>;
-        fade-delay = <15>;
-      };
-      #endif
-    };
+    }; 
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 };
