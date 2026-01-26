@@ -1,6 +1,8 @@
 manifest:
   remotes:
     - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: darknao
       url-base: https://github.com/darknao
     - name: Cyboard-DigitalTailor
       url-base: https://github.com/Cyboard-DigitalTailor
