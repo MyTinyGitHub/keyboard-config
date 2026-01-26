@@ -292,8 +292,8 @@
     underglow-layer {
       compatible = "zmk,underglow-layer";
 
-      #ifdef LAYER_Base
-        Base {
+      #ifdef LAYER_Default
+        Default {
           bindings = <
             ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
             ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
