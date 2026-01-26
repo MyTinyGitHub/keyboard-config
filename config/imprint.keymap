@@ -6,6 +6,26 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define RED_RGB 0xFF0000 // #FF0000 RED      => RED (red)
+#define COR_RGB 0xFF7C4D // #FF7C4D CORAL    => COR (coral)
+#define ORN_RGB 0xFF8000 // #FF8000 ORANGE   => ORN (ornj)
+#define GDN_RGB 0xD9A521 // #D9A521 GOLDNROD => GDN (gold'nrod)
+#define GOL_RGB 0xFFD900 // #FFD900 GOLD     => GOL (gold)
+#define YLW_RGB 0xFFFF00 // #FFFF00 YELLOW   => YLW (yellow)
+#define CHU_RGB 0x80FF00 // #80FF00 CHARTRSE => CHU (chartreuse)
+#define GRN_RGB 0x00FF00 // #00FF00 GREEN    => GRN (green)
+#define SPG_RGB 0x00FF80 // #00FF80 SPRINGRN => SPG (spring green)
+#define CYN_RGB 0x00FFFF // #00FFFF CYAN     => CYN (sigh-an)
+#define AZU_RGB 0x99F5FF // #99F5FF AZURE    => AZU (a-zur)
+#define TEA_RGB 0x008080 // #008080 TEAL     => TEA (teel)
+#define TUR_RGB 0x476E6A // #476E6A TURQUOIS => TUR (turquoise)
+#define BLU_RGB 0x0000FF // #0000FF BLUE     => BLU (bloo)
+#define PUR_RGB 0x7A00FF // #7A00FF PURPLE   => PUR (purp)
+#define MAJ_RGB 0xFF00FF // #FF00FF MAGENTA  => MAJ (mah-jenta)
+#define PNK_RGB 0xFF80BF // #FF80BF PINK     => PNK (pink)
+#define WHT_RGB 0xFFFFFF // #FFFFFF WHITE    => WHT (white)
+#define BLK_RGB 0x000000 // #000000 BLACK    => BLK (blak)
+
 / {
     chosen { 
       zmk,matrix-transform = &imprint_number_row_full_bottom_row; 
@@ -137,7 +157,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Default_Layer {
+        Default {
             bindings = <
 &none                 &kp N1                   &kp N2                   &kp N3                &kp N4                     &kp N5                          &kp N6              &kp N7                      &kp N8                 &kp N9                    &kp N0                    &kp GRAVE
 &kp ESCAPE            &kp Q                    &kp Y                    &kp O                 &kp U                      &kp EQUAL                       &kp X               &kp L                       &kp D                  &kp P                     &kp Z                     &none
@@ -149,7 +169,7 @@
             >;
         };
 
-        Extended_Layer {
+        Extended {
             bindings = <
 &kp GRAVE        &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &kp RIGHT_BRACKET            &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
 &kp EXCLAMATION  &kp COMMA                     &kp LEFT_BRACE                &kp RIGHT_BRACE                 &kp SEMICOLON                &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
@@ -161,7 +181,7 @@
             >;
         };
 
-        Number_Layer {
+        Numbers {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
@@ -173,7 +193,7 @@
             >;
         };
 
-        Symbols_Layer {
+        Symbols {
             bindings = <
 &kp GRAVE        &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET     &kp PERIOD               &none   &trans         &trans  &trans     &trans     &trans
 &kp EXCLAMATION  &kp COMMA         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON         &kp QUESTION             &none   &trans         &trans  &trans     &trans     &trans
@@ -185,7 +205,7 @@
             >;
         };
 
-        Mouse_Move_Layer {
+        Mouse_Move {
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
@@ -197,7 +217,7 @@
             >;
         };
 
-        Mouse_Scroll_Layer {
+        Mouse_Scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
@@ -209,7 +229,7 @@
             >;
         };
 
-        Keyboard_Control_Layer {
+        Keyboard_Control {
             bindings = <
 &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans           &trans
 &sys_reset   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4            &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
