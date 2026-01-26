@@ -288,8 +288,23 @@
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
+  
     underglow-layer {
+      compatible = "zmk,underglow-layer";
 
+      #ifdef LAYER_Base
+        Base {
+          bindings = <
+            ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+            ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+            ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+            ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
+            ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         ___ ___ ___ ___ ___
+          >;
+          layer-id = <0>;
+          fade-delay = <15>;
+        };
+      #endif
     };
 };
 
