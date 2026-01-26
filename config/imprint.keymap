@@ -26,6 +26,51 @@
 #define WHT_RGB 0xFFFFFF // #FFFFFF WHITE    => WHT (white)
 #define BLK_RGB 0x000000 // #000000 BLACK    => BLK (blak)
 
+#define RED &ug RED_RGB
+#define COR &ug COR_RGB
+#define ORN &ug ORN_RGB
+#define GDN &ug GDN_RGB
+#define GOL &ug GOL_RGB
+#define YLW &ug YLW_RGB
+#define CHU &ug CHU_RGB
+#define GRN &ug GRN_RGB
+#define SPG &ug SPG_RGB
+#define CYN &ug CYN_RGB
+#define AZU &ug AZU_RGB
+#define TEA &ug TEA_RGB
+#define TUR &ug TUR_RGB
+#define BLU &ug BLU_RGB
+#define PUR &ug PUR_RGB
+#define MAJ &ug MAJ_RGB
+#define PNK &ug PNK_RGB
+#define WHT &ug WHT_RGB
+#define BLK &ug BLK_RGB
+#define ___ &ug BLK_RGB
+#define DUG &ug DUG_RGB
+#define LAC &ug LAC_RGB
+#define RED &ug RED_RGB
+#define COR &ug COR_RGB
+#define ORN &ug ORN_RGB
+#define GDN &ug GDN_RGB
+#define GOL &ug GOL_RGB
+#define YLW &ug YLW_RGB
+#define CHU &ug CHU_RGB
+#define GRN &ug GRN_RGB
+#define SPG &ug SPG_RGB
+#define CYN &ug CYN_RGB
+#define AZU &ug AZU_RGB
+#define TEA &ug TEA_RGB
+#define TUR &ug TUR_RGB
+#define BLU &ug BLU_RGB
+#define PUR &ug PUR_RGB
+#define MAJ &ug MAJ_RGB
+#define PNK &ug PNK_RGB
+#define WHT &ug WHT_RGB
+#define BLK &ug BLK_RGB
+#define ___ &ug BLK_RGB
+#define DUG &ug DUG_RGB
+#define LAC &ug LAC_RGB
+
 / {
     chosen { 
       zmk,matrix-transform = &imprint_number_row_full_bottom_row; 
