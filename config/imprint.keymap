@@ -225,7 +225,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
     underglow-layer {
 
-    }
+    };
 };
 
 &trackball_peripheral_listener {
