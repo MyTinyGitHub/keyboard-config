@@ -134,19 +134,19 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Default_Layer {
+        Default {
             bindings = <
 &none          &kp N1                   &kp N2                   &kp N3                &kp N4                     &kp N5                          &kp N6              &kp N7                      &kp N8                 &kp N9                    &kp N0                    &kp GRAVE
-&kp ESCAPE     &kp Q                    &kp Y                    &kp O                 &kp U                      &kp EQUAL                       &kp X               &kp L                       &kp D                  &kp P                     &kp Z                     &none
+&kp ESCAPE     &kp Q                    &kp Y                    &kp O                 &kp U                      &kp EQUAL                       &kp X               &kp L                       &kp D                  &kp P                     &kp Z                     &kp TAB
 &kp B          &KP_170_LEFT LEFT_WIN C  &KP_150_LEFT LEFT_ALT I  &KP_150_LEFT LCTRL A  &KP_150_LEFT LEFT_SHIFT E  &kp MINUS                       &kp K               &KP_150_RIGHT LEFT_SHIFT H  &KP_150_RIGHT LCTRL T  &KP_150_RIGHT LEFT_ALT N  &KP_170_RIGHT LEFT_WIN S  &kp W
-&kp BACKSLASH  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD            &lt 2 SEMICOLON            &kp SLASH                       &kp J               &kp M                       &kp G                  &kp F                     &kp V                     &none
+&kp BACKSLASH  &hold_tap 3 SQT          &kp COMMA                &kp PERIOD            &lt 2 SEMICOLON            &kp SLASH                       &kp J               &kp M                       &kp G                  &kp F                     &kp V                     &none
 &none          &none                    &none                    &none                 &none                                                                          &none                       &none                  &none                     &none                     &none
                                                                                        &hold_tap 1 SPACE          &double_tap_backspace  &none    &none               &kp ENTER                   &hold_tap 1 R
-                                                                                       &kp GRAVE                  &none                  &none    &hold_tap 6 DELETE  &none                       &kp TAB
+                                                                                       &kp GRAVE                  &none                  &none    &hold_tap 5 DELETE  &none                       &none
             >;
         };
 
-        Extended_Layer {
+        Symbols {
             bindings = <
 &kp GRAVE        &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &kp RIGHT_BRACKET            &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
 &kp EXCLAMATION  &kp COMMA                     &kp LEFT_BRACE                &kp RIGHT_BRACE                 &kp SEMICOLON                &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
@@ -158,7 +158,7 @@
             >;
         };
 
-        Number_Layer {
+        Numbers {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
@@ -170,43 +170,31 @@
             >;
         };
 
-        Symbols_Layer {
-            bindings = <
-&kp GRAVE        &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET     &kp PERIOD               &none   &trans         &trans  &trans     &trans     &trans
-&kp EXCLAMATION  &kp COMMA         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON         &kp QUESTION             &none   &trans         &trans  &trans     &trans     &trans
-&kp HASH         &kp CARET         &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR            &kp ASTERISK             &none   &kp BACKSPACE  &trans  &kp SPACE  &kp ENTER  &trans
-&kp TILDE        &kp LESS_THAN     &kp PIPE              &kp MINUS              &kp GREATER_THAN      &kp BACKSLASH            &trans  &kp DELETE     &trans  &trans     &trans     &trans
-&trans           &kp AMPERSAND     &kp SQT               &kp DOUBLE_QUOTES      &kp PLUS                                               &trans         &trans  &trans     &trans     &trans
-                                                                                &kp NON_US_BACKSLASH  &kp AT_SIGN    &trans    &trans  &trans         &trans
-                                                                                &kp PERCENT           &trans         &trans    &trans  &trans         &trans
-            >;
-        };
-
-        Mouse_Move_Layer {
+        Mouse_Move {
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mo 5   &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mo 4   &trans  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
                                 &mkp LCLK  &mkp RCLK  &trans    &trans  &trans  &trans
                                 &mkp MCLK  &trans     &trans    &trans  &trans  &trans
             >;
         };
 
-        Mouse_Scroll_Layer {
+        Mouse_Scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
-&trans  &trans  &mo 5   &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
+&trans  &trans  &mo 4   &trans  &trans     &trans               &trans     &trans                 &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                     &trans                 &trans     &trans  &trans  &trans
                                 &mkp LCLK  &mkp RCLK  &trans    &mkp LCLK  &mkp MCLK              &mkp RCLK
                                 &mkp MCLK  &trans     &trans    &mkp MB4   &hold_tap 1 BACKSPACE  &mkp MB5
             >;
         };
 
-        Keyboard_Control_Layer {
+        Keyboard_Controls {
             bindings = <
 &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans           &trans
 &sys_reset   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4            &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
