@@ -142,7 +142,7 @@
 &kp BACKSLASH  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD            &lt 3 SEMICOLON            &kp SLASH                       &kp J               &kp M                       &kp G                  &kp F                     &kp V                     &none
 &none          &none                    &none                    &none                 &none                                                                          &none                       &none                  &none                     &none                     &to 1
                                                                                        &hold_tap 2 SPACE          &double_tap_backspace  &none    &none               &kp ENTER                   &hold_tap 2 R
-                                                                                       &kp GRAVE                  &none                  &none    &hold_tap 6 DELETE  &none                       &none
+                                                                                       &kp GRAVE                  &none                  &none    &hold_tap 6 DELETE  &none                       &kp TAB
             >;
         };
 
