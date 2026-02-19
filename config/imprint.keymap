@@ -10,25 +10,6 @@
     chosen { zmk,matrix-transform = &imprint_number_row_full_bottom_row; };
 
     behaviors {
-        KP_150_RIGHT: KP_150_RIGHT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KP_150_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 58 59 60 64 65 66>;
-            hold-trigger-on-release;
-        };
-
-        word_caps: word_caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "WORD_CAPS";
-            #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS DOT>;
-        };
-
         hold_tap: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
@@ -49,43 +30,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 58 59 60 64 65 66>;
             hold-trigger-on-release;
-        };
-
-        hold_tap_one_shot: hold_tap_one_shot {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_ONE_SHOT";
-            bindings = <&kp>, <&sk_2s>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 54 55 56 57 58 59 65 66 67 68 69 6 7 8 9 10 11>;
-        };
-
-        sk_2s: sk_2s {
-            compatible = "zmk,behavior-sticky-key";
-            label = "modifiers sticky key";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <2000>;
-        };
-
-        left_par_shift_less_then: left_par_shift_less_then {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_PAR_SHIFT_LESS_THEN";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        right_par_shift_greater_then: u {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Y";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         double_tap_backspace: double_tap_backspace {
@@ -120,15 +64,6 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
             hold-trigger-on-release;
         };
-
-        sticky_layer: sticky_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STICKY_LAYER";
-            bindings = <&lt>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
     };
 
     combos {
@@ -154,13 +89,13 @@
 
         Default {
             bindings = <
-&none          &kp N1                   &kp N2                   &kp N3                &kp N4                     &kp N5                          &kp N6              &kp N7                      &kp N8                 &kp N9                    &kp N0                    &kp GRAVE
-&kp ESCAPE     &kp Q                    &kp Y                    &kp O                 &kp U                      &kp EQUAL                       &kp X               &kp L                       &kp D                  &kp P                     &kp Z                     &kp TAB
-&kp B          &KP_170_LEFT LEFT_WIN C  &KP_150_LEFT LEFT_ALT I  &KP_150_LEFT LCTRL A  &KP_150_LEFT LEFT_SHIFT E  &kp MINUS                       &kp K               &KP_150_RIGHT LEFT_SHIFT H  &KP_150_RIGHT LCTRL T  &KP_150_RIGHT LEFT_ALT N  &KP_170_RIGHT LEFT_WIN S  &kp W
-&kp BACKSLASH  &hold_tap 4 SQT          &kp COMMA                &kp PERIOD            &lt 3 SEMICOLON            &kp SLASH                       &kp J               &kp M                       &kp G                  &kp F                     &kp V                     &none
-&none          &none                    &none                    &none                 &none                                                                          &none                       &none                  &none                     &none                     &to 1
-                                                                                       &hold_tap 2 SPACE          &double_tap_backspace  &none    &none               &kp ENTER                   &hold_tap 2 R
-                                                                                       &kp GRAVE                  &none                  &none    &hold_tap 6 DELETE  &none                       &kp TAB
+&none          &kp N1           &kp N2     &kp N3      &kp N4             &kp N5                          &kp N6              &kp N7     &kp N8         &kp N9  &kp N0  &kp GRAVE
+&kp ESCAPE     &kp Q            &kp Y      &kp O       &kp U              &kp EQUAL                       &kp X               &kp L      &kp D          &kp P   &kp Z   &kp TAB
+&kp B          &kp C            &kp I      &kp A       &kp E              &kp MINUS                       &kp K               &kp H      &kp T          &kp N   &kp S   &kp W
+&kp BACKSLASH  &hold_tap 4 SQT  &kp COMMA  &kp PERIOD  &lt 3 SEMICOLON    &kp SLASH                       &kp J               &kp M      &kp G          &kp F   &kp V   &none
+&none          &none            &none      &none       &none                                                                  &none      &none          &none   &none   &to 1
+                                                       &hold_tap 2 SPACE  &double_tap_backspace  &none    &none               &kp ENTER  &hold_tap 2 R
+                                                       &kp GRAVE          &none                  &none    &hold_tap 6 DELETE  &none      &kp TAB
             >;
         };
 
