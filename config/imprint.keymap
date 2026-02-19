@@ -166,13 +166,13 @@
 
         qwerty {
             bindings = <
-&trans  &trans                   &trans                   &trans                &trans                     &trans                           &trans  &trans                       &trans                       &trans                     &trans                             &trans
-&trans  &kp Q                    &kp W                    &kp E                 &kp R                      &kp T                            &kp Y   &kp U                        &kp I                        &kp O                      &kp P                              &trans
-&trans  &KP_170_LEFT LEFT_WIN A  &KP_150_LEFT LEFT_ALT S  &KP_150_LEFT LCTRL D  &KP_150_LEFT LEFT_SHIFT F  &kp G                            &kp H   &KP_150_RIGHT RIGHT_SHIFT J  &KP_150_RIGHT RCTRL K        &KP_150_RIGHT RIGHT_ALT L  &KP_170_RIGHT RIGHT_WIN SEMICOLON  &trans
-&trans  &hold_tap 4 Z            &kp X                    &hold_tap 3 C         &kp V                      &kp B                            &kp N   &kp M                        &kp COMMA                    &kp PERIOD                 &kp SLASH                          &trans
-&trans  &trans                   &trans                   &trans                &trans                                                              &trans                       &trans                       &trans                     &trans                             &to 0
-                                                                                &KP_150_LEFT LCTRL SPACE   &double_tap_backspace  &trans    &trans  &sl 2                        &KP_150_LEFT LEFT_GUI ENTER
-                                                                                &kp GRAVE                  &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT                 &kp TAB
+&trans  &trans         &trans  &trans         &trans                    &trans                           &trans  &trans        &trans                       &trans      &trans         &trans
+&trans  &kp Q          &kp W   &kp E          &kp R                     &kp T                            &kp Y   &kp U         &kp I                        &kp O       &kp P          &trans
+&trans  &kp A          &kp S   &kp D          &kp F                     &kp G                            &kp H   &kp J         &kp K                        &kp L       &kp SEMICOLON  &trans
+&trans  &hold_tap 4 Z  &kp X   &hold_tap 3 C  &kp V                     &kp B                            &kp N   &kp M         &kp COMMA                    &kp PERIOD  &kp SLASH      &trans
+&trans  &trans         &trans  &trans         &trans                                                             &trans        &trans                       &trans      &trans         &to 0
+                                              &KP_150_LEFT LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &KP_150_LEFT LEFT_GUI ENTER
+                                              &kp GRAVE                 &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT  &kp TAB
             >;
         };
 
