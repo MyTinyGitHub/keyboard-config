@@ -120,6 +120,15 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
             hold-trigger-on-release;
         };
+
+        sticky_layer: sticky_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_LAYER";
+            bindings = <&lt>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -148,13 +157,13 @@
 
         qwerty {
             bindings = <
-&trans  &trans                   &trans                   &trans                &trans                     &trans            &trans  &trans                       &trans                 &trans                     &trans                             &trans
-&trans  &kp Q                    &kp W                    &kp E                 &kp R                      &kp T             &kp Y   &kp U                        &kp I                  &kp O                      &kp P                              &trans
-&trans  &KP_170_LEFT LEFT_WIN A  &KP_150_LEFT LEFT_ALT S  &KP_150_LEFT LCTRL D  &KP_150_LEFT LEFT_SHIFT F  &kp G             &kp H   &KP_150_RIGHT RIGHT_SHIFT J  &KP_150_RIGHT RCTRL K  &KP_150_RIGHT RIGHT_ALT L  &KP_170_RIGHT RIGHT_WIN SEMICOLON  &trans
-&trans  &hold_tap 4 Z            &kp X                    &hold_tap 3 C         &kp V                      &kp B             &kp N   &kp M                        &kp COMMA              &kp PERIOD                 &kp SLASH                          &trans
-&trans  &trans                   &trans                   &trans                &trans                                               &trans                       &trans                 &trans                     &trans                             &to 0
-                                                                                &trans                     &trans  &trans    &trans  &trans                       &hold_tap 2 ENTER
-                                                                                &trans                     &trans  &trans    &trans  &trans                       &trans
+&trans  &trans                   &trans                   &trans                &trans                     &trans                           &trans  &trans                       &trans                       &trans                     &trans                             &trans
+&trans  &kp Q                    &kp W                    &kp E                 &kp R                      &kp T                            &kp Y   &kp U                        &kp I                        &kp O                      &kp P                              &trans
+&trans  &KP_170_LEFT LEFT_WIN A  &KP_150_LEFT LEFT_ALT S  &KP_150_LEFT LCTRL D  &KP_150_LEFT LEFT_SHIFT F  &kp G                            &kp H   &KP_150_RIGHT RIGHT_SHIFT J  &KP_150_RIGHT RCTRL K        &KP_150_RIGHT RIGHT_ALT L  &KP_170_RIGHT RIGHT_WIN SEMICOLON  &trans
+&trans  &hold_tap 4 Z            &kp X                    &hold_tap 3 C         &kp V                      &kp B                            &kp N   &kp M                        &kp COMMA                    &kp PERIOD                 &kp SLASH                          &trans
+&trans  &trans                   &trans                   &trans                &trans                                                              &trans                       &trans                       &trans                     &trans                             &to 0
+                                                                                &KP_150_LEFT LCTRL SPACE   &double_tap_backspace  &trans    &trans  &sl 2                        &KP_150_LEFT LEFT_GUI ENTER
+                                                                                &kp GRAVE                  &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT                 &kp TAB
             >;
         };
 
