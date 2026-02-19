@@ -20,18 +20,6 @@
             flavor = "balanced";
         };
 
-        KP_170_RIGHT: KP_170_RIGHT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KP_170_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 58 59 60 64 65 66>;
-            hold-trigger-on-release;
-        };
-
         double_tap_backspace: double_tap_backspace {
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLE_TAP_BACKSPACE";
@@ -41,27 +29,15 @@
             tapping-term-ms = <250>;
         };
 
-        KP_150_LEFT: KP_150_LEFT {
+        kp_chars: kp_chars {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_150_LEFT";
+            label = "KP_CHARS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
-            hold-trigger-on-release;
-        };
-
-        KP_170_LEFT: KP_170_LEFT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KP_170_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
             hold-trigger-on-release;
         };
     };
@@ -101,25 +77,25 @@
 
         qwerty {
             bindings = <
-&trans  &trans         &trans  &trans         &trans                    &trans                           &trans  &trans        &trans                       &trans      &trans         &trans
-&trans  &kp Q          &kp W   &kp E          &kp R                     &kp T                            &kp Y   &kp U         &kp I                        &kp O       &kp P          &trans
-&trans  &kp A          &kp S   &kp D          &kp F                     &kp G                            &kp H   &kp J         &kp K                        &kp L       &kp SEMICOLON  &trans
-&trans  &hold_tap 4 Z  &kp X   &hold_tap 3 C  &kp V                     &kp B                            &kp N   &kp M         &kp COMMA                    &kp PERIOD  &kp SLASH      &trans
-&trans  &trans         &trans  &trans         &trans                                                             &trans        &trans                       &trans      &trans         &to 0
-                                              &KP_150_LEFT LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &KP_150_LEFT LEFT_GUI ENTER
-                                              &kp GRAVE                 &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT  &kp TAB
+&trans  &trans         &trans  &trans         &trans                 &trans                           &trans  &trans        &trans                    &trans      &trans         &trans
+&trans  &kp Q          &kp W   &kp E          &kp R                  &kp T                            &kp Y   &kp U         &kp I                     &kp O       &kp P          &trans
+&trans  &kp A          &kp S   &kp D          &kp F                  &kp G                            &kp H   &kp J         &kp K                     &kp L       &kp SEMICOLON  &trans
+&trans  &hold_tap 4 Z  &kp X   &hold_tap 3 C  &kp V                  &kp B                            &kp N   &kp M         &kp COMMA                 &kp PERIOD  &kp SLASH      &trans
+&trans  &trans         &trans  &trans         &trans                                                          &trans        &trans                    &trans      &trans         &to 0
+                                              &kp_chars LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &kp_chars LEFT_GUI ENTER
+                                              &kp GRAVE              &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT  &kp TAB
             >;
         };
 
         Symbols {
             bindings = <
-&kp GRAVE        &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS           &kp RIGHT_BRACKET            &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
-&kp EXCLAMATION  &kp COMMA                     &kp LEFT_BRACE                &kp RIGHT_BRACE                 &kp SEMICOLON                &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
-&kp HASH         &KP_170_RIGHT LEFT_GUI CARET  &KP_170_RIGHT LEFT_ALT EQUAL  &KP_170_RIGHT LCTRL UNDERSCORE  &KP_170_RIGHT LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
-&kp TILDE        &kp LESS_THAN                 &kp PIPE                      &kp MINUS                       &kp GREATER_THAN             &kp NON_US_BACKSLASH            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
-&trans           &kp AMPERSAND                 &kp SQT                       &kp DOUBLE_QUOTES               &kp PLUS                                                                    &trans         &trans    &trans      &trans           &trans
-                                                                                                             &trans                       &trans                &trans    &trans         &trans         &trans
-                                                                                                             &trans                       &trans                &trans    &trans         &trans         &trans
+&kp GRAVE        &kp LEFT_BRACKET          &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS       &kp RIGHT_BRACKET        &kp PERIOD                      &kp F6         &kp F7         &kp F8    &kp F9      &kp F10          &trans
+&kp EXCLAMATION  &kp COMMA                 &kp LEFT_BRACE            &kp RIGHT_BRACE             &kp SEMICOLON            &kp QUESTION                    &kp PG_UP      &kp HOME       &kp UP    &kp END     &kp CAPSLOCK     &trans
+&kp HASH         &kp_chars LEFT_GUI CARET  &kp_chars LEFT_ALT EQUAL  &kp_chars LCTRL UNDERSCORE  &kp_chars LSHIFT DOLLAR  &kp ASTERISK                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE       &trans
+&kp TILDE        &kp LESS_THAN             &kp PIPE                  &kp MINUS                   &kp GREATER_THAN         &kp NON_US_BACKSLASH            &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_MENU  &kp PRINTSCREEN  &trans
+&trans           &kp AMPERSAND             &kp SQT                   &kp DOUBLE_QUOTES           &kp PLUS                                                                &trans         &trans    &trans      &trans           &trans
+                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
+                                                                                                 &trans                   &trans                &trans    &trans         &trans         &trans
             >;
         };
 
