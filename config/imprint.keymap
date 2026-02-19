@@ -136,7 +136,16 @@
 
         word_caps {
             bindings = <&caps_word>;
-            key-positions = <76 81>;
+            key-positions = <76 81 63 58>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
+        };
+
+        jk-esc {
+            bindings = <&none>;
+            key-positions = <33 32>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
         };
     };
 
