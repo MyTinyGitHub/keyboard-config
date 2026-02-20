@@ -40,6 +40,15 @@
             hold-trigger-key-positions = <6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
             hold-trigger-on-release;
         };
+
+        terminal_double_tap: terminal_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TERMINAL_DOUBLE_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp_chars LEFT_GUI ENTER>, <&kp LG(ENTER)>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -77,12 +86,12 @@
 
         qwerty {
             bindings = <
-&trans  &trans         &trans  &trans  &trans                 &trans                           &trans  &trans        &trans                    &trans      &trans         &trans
-&trans  &kp Q          &kp W   &kp E   &kp R                  &kp T                            &kp Y   &kp U         &kp I                     &kp O       &kp P          &trans
-&trans  &kp A          &kp S   &kp D   &kp F                  &kp G                            &kp H   &kp J         &kp K                     &kp L       &kp SEMICOLON  &trans
-&trans  &hold_tap 4 Z  &kp X   &kp C   &lt 3 V                &kp B                            &kp N   &kp M         &kp COMMA                 &kp PERIOD  &kp SLASH      &trans
-&trans  &trans         &trans  &trans  &trans                                                          &trans        &trans                    &trans      &trans         &to 0
-                                       &kp_chars LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &kp_chars LEFT_GUI ENTER
+&trans  &trans         &trans  &trans  &trans                 &trans                           &trans  &trans        &trans                &trans      &trans         &trans
+&trans  &kp Q          &kp W   &kp E   &kp R                  &kp T                            &kp Y   &kp U         &kp I                 &kp O       &kp P          &trans
+&trans  &kp A          &kp S   &kp D   &kp F                  &kp G                            &kp H   &kp J         &kp K                 &kp L       &kp SEMICOLON  &trans
+&trans  &hold_tap 4 Z  &kp X   &kp C   &lt 3 V                &kp B                            &kp N   &kp M         &kp COMMA             &kp PERIOD  &kp SLASH      &trans
+&trans  &trans         &trans  &trans  &trans                                                          &trans        &trans                &trans      &trans         &to 0
+                                       &kp_chars LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &terminal_double_tap
                                        &kp GRAVE              &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT  &kp TAB
             >;
         };
