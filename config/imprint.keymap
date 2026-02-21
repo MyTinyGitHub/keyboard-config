@@ -47,7 +47,7 @@
             #binding-cells = <0>;
             bindings = <&kp_chars LEFT_GUI ENTER>, <&kp LG(ENTER)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
         };
     };
 
