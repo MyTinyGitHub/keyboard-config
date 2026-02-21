@@ -35,19 +35,27 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57 61 62 63 67 68 69>;
-            hold-trigger-on-release;
         };
 
         terminal_double_tap: terminal_double_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TERMINAL_DOUBLE_TAP";
             #binding-cells = <0>;
-            bindings = <&kp_chars LEFT_GUI ENTER>, <&kp LG(ENTER)>;
+            bindings = <&kp_chars_0ms LEFT_GUI ENTER>, <&kp LG(ENTER)>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
+        };
+
+        kp_chars_0ms: kp_chars_0ms {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_CHARS_0MS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
         };
     };
 
