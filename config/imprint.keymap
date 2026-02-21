@@ -91,8 +91,8 @@
 &trans  &kp A          &kp S   &kp D   &kp F                  &kp G                            &kp H   &kp J         &kp K                 &kp L       &kp SEMICOLON  &trans
 &trans  &hold_tap 4 Z  &kp X   &kp C   &lt 3 V                &kp B                            &kp N   &kp M         &kp COMMA             &kp PERIOD  &kp SLASH      &trans
 &trans  &trans         &trans  &trans  &trans                                                          &trans        &trans                &trans      &trans         &to 0
-                                       &kp_chars LCTRL SPACE  &double_tap_backspace  &trans    &trans  &sl 2         &terminal_double_tap
-                                       &kp GRAVE              &kp LEFT_SHIFT         &trans    &trans  &sk LEFT_ALT  &kp TAB
+                                       &kp_chars LCTRL SPACE  &double_tap_backspace  &trans    &trans  &kp TAB       &terminal_double_tap
+                                       &kp LEFT_SHIFT         &kp GRAVE              &trans    &trans  &sk LEFT_ALT  &sl 2
             >;
         };
 
