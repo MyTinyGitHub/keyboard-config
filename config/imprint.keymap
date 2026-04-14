@@ -88,7 +88,7 @@
 &sk LEFT_SHIFT  &hold_tap 3 Z  &kp X   &kp C      &lt 2 V                     &kp B                   &kp N               &kp M           &kp COMMA          &kp PERIOD  &kp SLASH      &sk LEFT_SHIFT
 &none           &none          &none   &sk LCTRL  &sk LSHIFT                                                              &sk LEFT_SHIFT  &sk LCTRL          &none       &none          &none
                                                   &kp_chars LEFT_SHIFT SPACE  &kp BACKSPACE  &none    &none               &kp TAB         &hold_tap 1 ENTER
-                                                  &kp GRAVE                   &none          &none    &hold_tap 5 DELETE  &sk LEFT_WIN    &kp LEFT_ALT
+                                                  &kp GRAVE                   &none          &none    &hold_tap 5 DELETE  &sk LEFT_WIN    &sk LEFT_ALT
             >;
         };
 
