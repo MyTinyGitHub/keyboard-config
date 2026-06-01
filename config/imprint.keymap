@@ -27,7 +27,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <252>;
         };
 
         kp_chars: kp_chars {
